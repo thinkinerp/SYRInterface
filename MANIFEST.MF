@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Class-Path: lib/mysql-connector-java-5.1.38.jar lib/log4j-1.2.17.jar
+Main-Class: com.sy.testShift.ShiftManager

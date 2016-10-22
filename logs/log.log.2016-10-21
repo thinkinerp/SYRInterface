@@ -1,0 +1,2 @@
+2016-10-21 15:26:52  [ main:0 ] - [ INFO ]  urljdbc:mysql://localhost:3306/yonghuibi dbuser:root dbpwd:root start to new test enviroment
+2016-10-21 15:26:53  [ main:391 ] - [ INFO ]  call remove_testshift(30 ) completed!

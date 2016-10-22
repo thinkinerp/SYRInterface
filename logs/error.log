@@ -1,0 +1,20 @@
+2016-10-22 18:07:55  [ main:440 ] - [ ERROR ]  com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+2016-10-22 18:08:48  [ main:437 ] - [ ERROR ]  com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+2016-10-22 18:09:19  [ main:437 ] - [ ERROR ]  com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'replace(replace(t2.content , '_test'  , '')
+		,CONCAT('_',9907,'_')
+		, CONCAT('' at line 2
+2016-10-22 18:26:07  [ main:480 ] - [ ERROR ]  java.sql.SQLException: Illegal operation on empty result set.
+2016-10-22 18:33:50  [ main:494 ] - [ ERROR ]  java.sql.BatchUpdateException: PROCEDURE ETL_report_id_031_main already exists
+2016-10-22 18:36:34  [ main:441 ] - [ ERROR ]  com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '() begin
+
+/*
+ test
+*/
+	delete from yonghuibi.report_data_031_main where report_i' at line 1
+2016-10-22 18:37:56  [ main:523 ] - [ ERROR ]  com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '() begin
+
+/*
+ test
+*/
+	delete from yonghuibi.report_data_031_main where report_i' at line 1
+2016-10-22 18:44:19  [ main:364 ] - [ ERROR ]  com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '()' at line 1

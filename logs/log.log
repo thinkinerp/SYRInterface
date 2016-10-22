@@ -1,0 +1,786 @@
+2016-10-22 17:54:47  [ main:0 ] - [ INFO ]  urljdbc:mysql://localhost:3306/yonghuibi dbuser:root dbpwd:root start to new test enviroment
+2016-10-22 17:54:47  [ main:521 ] - [ INFO ]  call testshift(31 ) completed!
+2016-10-22 17:54:47  [ main:528 ] - [ INFO ]  获取测试报表的 ID 是：9907
+2016-10-22 17:54:47  [ main:529 ] - [ INFO ]  urljdbc:mysql://localhost:3306/yonghuibi dbuser:root dbpwd:root start to new test enviroment
+2016-10-22 17:54:47  [ main:555 ] - [ INFO ]  drop PROCEDURE yonghuibi.ETL_report_id_9907_main_test :false
+2016-10-22 17:54:47  [ main:560 ] - [ INFO ]  create PROCEDURE yonghuibi.ETL_report_id_9907_main_test :false
+2016-10-22 18:07:55  [ main:0 ] - [ INFO ]  urljdbc:mysql://localhost:3306/yonghuibi dbuser:root dbpwd:root start to new test enviroment
+2016-10-22 18:07:55  [ main:440 ] - [ ERROR ]  com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+2016-10-22 18:08:47  [ main:0 ] - [ INFO ]  urljdbc:mysql://localhost:3306/yonghuibi dbuser:root dbpwd:root start to new test enviroment
+2016-10-22 18:08:48  [ main:406 ] - [ INFO ]  select test_id from sys_test_enviroment where original_id = '_031_')
+2016-10-22 18:08:48  [ main:437 ] - [ ERROR ]  com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+2016-10-22 18:09:19  [ main:0 ] - [ INFO ]  urljdbc:mysql://localhost:3306/yonghuibi dbuser:root dbpwd:root start to new test enviroment
+2016-10-22 18:09:19  [ main:410 ] - [ INFO ]  select test_id from sys_test_enviroment where original_id = '_031_'
+2016-10-22 18:09:19  [ main:425 ] - [ INFO ]  select t1.content , t2.content 
+        replace(replace(t2.content , '_test'  , '')
+		,CONCAT('_',9907,'_')
+		, CONCAT('_',031,'_'))
+from 
+sys_template_reports as t1 ,
+sys_template_reports as t2
+where t1.report_id = 31 and  and t2.report_id = 9907)
+2016-10-22 18:09:19  [ main:437 ] - [ ERROR ]  com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'replace(replace(t2.content , '_test'  , '')
+		,CONCAT('_',9907,'_')
+		, CONCAT('' at line 2
+2016-10-22 18:26:07  [ main:0 ] - [ INFO ]  urljdbc:mysql://localhost:3306/yonghuibi dbuser:root dbpwd:root start to new test enviroment
+2016-10-22 18:26:07  [ main:442 ] - [ INFO ]  select test_id from sys_test_enviroment where original_id = '_031_'
+2016-10-22 18:26:07  [ main:463 ] - [ INFO ]  update
+sys_template_reports as t1 ,
+sys_template_reports as t2
+   set t1.content =replace(t2.content 
+		           ,CONCAT('_',9907,'_')
+		           , '_031_')
+where t1.report_id = 31 and t2.report_id = 9907
+2016-10-22 18:26:07  [ main:480 ] - [ ERROR ]  java.sql.SQLException: Illegal operation on empty result set.
+2016-10-22 18:27:58  [ main:0 ] - [ INFO ]  urljdbc:mysql://localhost:3306/yonghuibi dbuser:root dbpwd:root start to new test enviroment
+2016-10-22 18:27:58  [ main:430 ] - [ INFO ]  select test_id from sys_test_enviroment where original_id = '_031_'
+2016-10-22 18:27:58  [ main:447 ] - [ INFO ]  update
+sys_template_reports as t1 ,
+sys_template_reports as t2
+   set t1.content =replace(t2.content 
+		           ,CONCAT('_',9907,'_')
+		           , '_031_')
+where t1.report_id = 31 and t2.report_id = 9907
+2016-10-22 18:29:07  [ main:0 ] - [ INFO ]  urljdbc:mysql://localhost:3306/yonghuibi dbuser:root dbpwd:root start to new test enviroment
+2016-10-22 18:29:07  [ main:403 ] - [ INFO ]  select test_id from sys_test_enviroment where original_id = '_031_'
+2016-10-22 18:29:07  [ main:422 ] - [ INFO ]  update
+sys_template_reports as t1 ,
+sys_template_reports as t2
+   set t1.content =replace(t2.content 
+		           ,CONCAT('_',9907,'_')
+		           , '_031_')
+where t1.report_id = 31 and t2.report_id = 9907
+2016-10-22 18:29:17  [ main:0 ] - [ INFO ]  urljdbc:mysql://localhost:3306/yonghuibi dbuser:root dbpwd:root start to new test enviroment
+2016-10-22 18:29:18  [ main:375 ] - [ INFO ]  select test_id from sys_test_enviroment where original_id = '_031_'
+2016-10-22 18:29:18  [ main:392 ] - [ INFO ]  update
+sys_template_reports as t1 ,
+sys_template_reports as t2
+   set t1.content =replace(t2.content 
+		           ,CONCAT('_',9907,'_')
+		           , '_031_')
+where t1.report_id = 31 and t2.report_id = 9907
+2016-10-22 18:33:50  [ main:0 ] - [ INFO ]  urljdbc:mysql://localhost:3306/yonghuibi dbuser:root dbpwd:root start to new test enviroment
+2016-10-22 18:33:50  [ main:459 ] - [ INFO ]  select test_id from sys_test_enviroment where original_id = '_031_'
+2016-10-22 18:33:50  [ main:473 ] - [ INFO ]  update
+sys_template_reports as t1 ,
+sys_template_reports as t2
+   set t1.content =replace(t2.content 
+		           ,CONCAT('_',9907,'_')
+		           , '_031_')
+where t1.report_id = 31 and t2.report_id = 9907
+2016-10-22 18:33:50  [ main:494 ] - [ ERROR ]  java.sql.BatchUpdateException: PROCEDURE ETL_report_id_031_main already exists
+2016-10-22 18:36:34  [ main:0 ] - [ INFO ]  urljdbc:mysql://localhost:3306/yonghuibi dbuser:root dbpwd:root start to new test enviroment
+2016-10-22 18:36:34  [ main:403 ] - [ INFO ]  select test_id from sys_test_enviroment where original_id = '_031_'
+2016-10-22 18:36:34  [ main:419 ] - [ INFO ]  update
+sys_template_reports as t1 ,
+sys_template_reports as t2
+   set t1.content =replace(t2.content 
+		           ,CONCAT('_',9907,'_')
+		           , '_031_')
+where t1.report_id = 31 and t2.report_id = 9907
+2016-10-22 18:36:34  [ main:441 ] - [ ERROR ]  com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '() begin
+
+/*
+ test
+*/
+	delete from yonghuibi.report_data_031_main where report_i' at line 1
+2016-10-22 18:37:55  [ main:0 ] - [ INFO ]  urljdbc:mysql://localhost:3306/yonghuibi dbuser:root dbpwd:root start to new test enviroment
+2016-10-22 18:37:56  [ main:478 ] - [ INFO ]  select test_id from sys_test_enviroment where original_id = '_031_'
+2016-10-22 18:37:56  [ main:498 ] - [ INFO ]  update
+sys_template_reports as t1 ,
+sys_template_reports as t2
+   set t1.content =replace(t2.content 
+		           ,CONCAT('_',9907,'_')
+		           , '_031_')
+where t1.report_id = 31 and t2.report_id = 9907
+2016-10-22 18:37:56  [ main:506 ] - [ INFO ]  ALTER PROCEDURE ETL_report_id_031_main() begin
+
+/*
+ test
+*/
+	delete from yonghuibi.report_data_031_main where report_id = 31 ;
+	delete from yonghuibi.report_data_031_banner where report_id = 31 ;
+INSERT INTO yonghuibi.report_data_031_banner
+					(report_id, group_id, period, num, 
+					part_name, 
+					`level`, dim_date, dim_com, dim5, 
+					mea_float1, mea_float2, mea_float3, 
+					mea_float4, mea_float5, mea_float6, 
+					mea_float7, mea_float8, mea_float9, 
+					created_at, updated_at)
+
+select distinct
+   31 
+ , t3.group_id  
+ , t1.sales_date 					 as period 
+ , t1.store_name 				 as num 
+ ,'filter'   							 as part_name
+ , 1           							 as `LEVEL`
+ , null            		             as dim_date
+ , t1.store_name       			 as dim_com
+ , t1.store_name                   as dim5
+ , t1.sales_amount as mea_float1 
+ , null as mea_float2 
+ , null  								 as mea_float3
+ , null  				 				 as mea_float4 
+ , null								 as mea_float5 
+ , null 								 as mea_float6 
+ , null 								 as mea_float7 
+ , null 								 as mea_float8 
+ , null                    			 as mea_float9 
+ , now()         					 as createtime  
+ , now()         					 as updatetime 
+from 
+yonghuibi_s.kpi_bravo_realtime as t1
+left join (
+select group_id ,dept_ids,class_ids,gids ,
+       district_ids,province_ids from  `yonghuibi`.sys_group_resources
+               where group_id in (select group_id from yonghuibi.sys_group_reports where report_id = 31 )
+) t3 on 1=1 
+where  t1.flagtype = 'shopall'  and t1.store_class = 'class2' and t1.typeflag = 1
+           and (t3.district_ids='all' or LOCATE(T1.store_area,T3.district_ids)>0 )
+           order by t1.sales_hour , t1.store_name , t3.group_id
+;  
+  	INSERT into yonghuibi.report_data_031_main(
+			  report_id,group_id,period,num,
+              part_name,`level`,dim1,dim_com,dim5
+              ,mea_float1,mea_float2,mea_float3
+			  ,mea_float4,mea_float5,mea_float6,mea_float7
+              ,mea_float8,mea_float9,load_time
+)
+select 
+   31 
+ , t3.group_id  
+ , t1.sales_date as period 
+ , case when  t1.sales_hour < 10 then concat('0',t1.sales_hour)  else t1.sales_hour end  as num 
+ ,'chart1'     as part_name
+ , 1           as `LEVEL`
+ , t1.store_name       as dim1
+ , t1.sales_hour       			 as dim_com
+ ,t1.store_name       as dim5
+ ,SUM(CASE WHEN t1.typeflag = 1 THEN t1.sales_amount else null END)/10000  as mea_float1 
+ ,SUM(CASE WHEN t1.typeflag = 2 THEN t1.sales_amount else null END)/10000  as mea_float2 
+ , null  as mea_float3
+ , null  				 as mea_float4 
+ , null								 as mea_float5 
+ , null 								 as mea_float6 
+ , null 								 as mea_float7 
+ , null 								 as mea_float8 
+ , null                    			 as mea_float9 
+ , now()         					 as updatetime 
+from 
+yonghuibi_s.kpi_bravo_realtime as t1
+left join (
+select group_id ,dept_ids,class_ids,gids ,
+       district_ids,province_ids from  `yonghuibi`.sys_group_resources
+                      where group_id in (select group_id from yonghuibi.sys_group_reports where report_id = 31 )
+) t3 on 1=1 
+where  t1.flagtype = 'shophour'  and t1.store_class = 'class2'
+           and (t3.district_ids='all' or LOCATE(T1.store_area,T3.district_ids)>0 )
+           group by t1.sales_hour,t3.group_id,t1.store_name
+order by t1.sales_hour , t1.store_name , t3.group_id
+;
+	
+
+INSERT into yonghuibi.report_data_031_main(
+			  report_id,group_id,period,num,
+              part_name,`level`,dim1,dim_com , dim5
+              ,mea_float1,mea_float2,mea_float3
+			  ,mea_float4,mea_float5,mea_float6,mea_float7
+              ,mea_float8,mea_float9,load_time
+)
+select 
+   31
+ , t3.group_id  
+ , t1.sales_date as period 
+ , case when  t1.sales_hour < 10 then concat('0',t1.sales_hour)  else t1.sales_hour end  as num 
+ ,'grid1'     as part_name
+ , 1           as `LEVEL`
+ ,t1.store_name       as dim1
+ , case when  t1.sales_hour < 10 then concat('0',t1.sales_hour)  else t1.sales_hour end      			 as dim_com
+ ,t1.store_name      as dim5
+ , (t1.sales_amount)  			 as mea_float1 
+ , (t1.order_cnt  )                      as mea_float2 
+ , (t1.profit)/(t1.sales_amount)  as mea_float3
+ , (t1.sales_amount) / (t1.order_cnt) 				 as mea_float4 
+ , t1.sku_cnt as mea_float5
+ , NULL								 as mea_float6 
+ , null 								 as mea_float7 
+ , null 								 as mea_float8 
+ , null 								 as mea_float9 
+ , now()         					 as updatetime 
+from 
+yonghuibi_s.kpi_bravo_realtime as t1
+left join (
+select group_id ,dept_ids,class_ids,gids ,
+       district_ids,province_ids from  `yonghuibi`.sys_group_resources
+                      where group_id in (select group_id from yonghuibi.sys_group_reports where report_id = 31 )
+) t3 on 1=1 
+where  t1.flagtype = 'shophour' and t1.store_class = 'class2' and t1.typeflag = 1 
+           and (t3.district_ids='all' or LOCATE(T1.store_area,T3.district_ids)>0 )
+
+;
+  
+
+INSERT into yonghuibi.report_data_031_main(
+			  report_id,group_id,period,num,
+              part_name,`level`,dim1,dim_com,dim5
+              ,mea_float1,mea_float2,mea_float3
+			  ,mea_float4,mea_float5,mea_float6,mea_float7
+              ,mea_float8,mea_float9,load_time
+)
+select 
+   31
+ , t3.group_id  
+ , t1.sales_date as period 
+ , '0'  as num 
+ ,'grid1'     as part_name
+ , 1           as `LEVEL`
+ ,t1.store_name       as dim1
+ , '????'		     as dim_com
+ ,t1.store_name       as dim5
+ , (t1.sales_amount)  			 as mea_float1 
+ , (t1.order_cnt  )                      as mea_float2 
+ , (t1.profit)/(t1.sales_amount)  as mea_float3
+ , (t1.sales_amount) / (t1.order_cnt) 				 as mea_float4 
+ , t1.sku_cnt as mea_float5
+ , null								 as mea_float6 
+ , null 								 as mea_float7 
+ , null 								 as mea_float8 
+ , null 								 as mea_float9 
+ , now()         					 as updatetime 
+from 
+yonghuibi_s.kpi_bravo_realtime as t1
+left join (
+select group_id ,dept_ids,class_ids,gids ,
+       district_ids,province_ids from  `yonghuibi`.sys_group_resources
+                      where group_id in (select group_id from yonghuibi.sys_group_reports where report_id = 31 )
+) t3 on 1=1 
+where  t1.flagtype = 'shopall' and t1.store_class = 'class2' and t1.typeflag = 1 
+           and (t3.district_ids='all' or LOCATE(T1.store_area,T3.district_ids)>0 )
+
+;
+  
+INSERT into yonghuibi.report_data_031_main(
+			  report_id,group_id,period,num,
+              part_name,`level`,dim1,dim_com , dim5
+              ,mea_float1,mea_float2,mea_float3
+			  ,mea_float4,mea_float5,mea_float6,mea_float7
+              ,mea_float8,mea_float9,load_time
+)
+select 
+   31
+ , t3.group_id  
+ , t1.sales_date as period 
+ , case when  t1.sales_hour < 10 then concat('0',t1.sales_hour)  else t1.sales_hour end  as num 
+ ,'grid3'     as part_name
+ , 1           as `LEVEL`
+ ,t1.store_name       as dim1
+ , case when  t1.sales_hour < 10 then concat('0',t1.sales_hour)  else t1.sales_hour end      			 as dim_com
+ ,t1.store_name      as dim5
+ , (t1.sales_amount)  			 as mea_float1 
+ , (t1.order_cnt  )                      as mea_float2 
+ , (t1.profit)/(t1.sales_amount)  as mea_float3
+ , (t1.sales_amount) / (t1.order_cnt) 				 as mea_float4 
+ , t1.sku_cnt as mea_float5
+ , null								 as mea_float6 
+ , null 								 as mea_float7 
+ , null 								 as mea_float8 
+ , null 								 as mea_float9 
+ , now()         					 as updatetime 
+from 
+yonghuibi_s.kpi_bravo_realtime as t1
+left join (
+select group_id ,dept_ids,class_ids,gids ,
+       district_ids,province_ids from  `yonghuibi`.sys_group_resources
+                      where group_id in (select group_id from yonghuibi.sys_group_reports where report_id = 31 )
+) t3 on 1=1 
+where  t1.flagtype = 'shophour' and t1.store_class = 'class2' and t1.typeflag = 2
+           and (t3.district_ids='all' or LOCATE(T1.store_area,T3.district_ids)>0 )
+
+;
+  
+
+INSERT into yonghuibi.report_data_031_main(
+			  report_id,group_id,period,num,
+              part_name,`level`,dim1,dim_com,dim5
+              ,mea_float1,mea_float2,mea_float3
+			  ,mea_float4,mea_float5,mea_float6,mea_float7
+              ,mea_float8,mea_float9,load_time
+)
+select 
+   31
+ , t3.group_id  
+ , t1.sales_date as period 
+ , '0'  as num 
+ ,'grid3'     as part_name
+ , 1           as `LEVEL`
+ ,t1.store_name       as dim1
+ , '????'		     as dim_com
+ ,t1.store_name       as dim5
+ , (t1.sales_amount)  			 as mea_float1 
+ , (t1.order_cnt  )                      as mea_float2 
+ , (t1.profit)/(t1.sales_amount)  as mea_float3
+ , (t1.sales_amount) / (t1.order_cnt) 				 as mea_float4 
+ , t1.sku_cnt as mea_float5
+ , null								 as mea_float6 
+ , null 								 as mea_float7 
+ , null 								 as mea_float8 
+ , null 								 as mea_float9 
+ , now()         					 as updatetime 
+from 
+yonghuibi_s.kpi_bravo_realtime as t1
+left join (
+select group_id ,dept_ids,class_ids,gids ,
+       district_ids,province_ids from  `yonghuibi`.sys_group_resources
+                      where group_id in (select group_id from yonghuibi.sys_group_reports where report_id = 31 )
+) t3 on 1=1 
+where  t1.flagtype = 'shopall' and t1.store_class = 'class2' and t1.typeflag = 2
+           and (t3.district_ids='all' or LOCATE(T1.store_area,T3.district_ids)>0 )
+
+;
+
+
+
+INSERT into yonghuibi.report_data_031_main(
+			  report_id,group_id,period,num,
+              part_name,`level`,dim1,dim_com,dim5
+              ,mea_float1,mea_float2,mea_float3
+			  ,mea_float4,mea_float5,mea_float6,mea_float7
+              ,mea_float8,mea_float9,load_time
+)
+select 
+   31
+ , t3.group_id  
+ , t1.sales_date as period 
+ , concat(t1.store_name , t1.cat1_name)  as num 
+ ,'grid2'     as part_name
+ , 1           as `LEVEL`
+ ,t1.store_name       as dim1
+ , t1.cat1_name  			 as dim_com
+ ,t1.store_name       as dim5
+ , t1.sales_amount 			 as mea_float1 
+ , (t1.sales_amount  )/( select sales_amount from  yonghuibi_s.kpi_bravo_realtime as tt where tt.store_id = t1.store_id and tt.flagtype = 'shopall' and tt.store_class = 'class2' and tt.typeflag = 1)                      as mea_float2 
+ , t1.profit  as mea_float3
+ , ( t1.order_cnt ) 				 as mea_float4 
+ , (t1.profit  )/( t1.sales_amount ) 								 as mea_float5 
+ , (t1.avg_amount) 								 as mea_float6 
+ , t1.health_amount 								 as mea_float7 
+ , sku_cnt 								 as mea_float8 
+ , null 								 as mea_float9 
+ , now()         					 as updatetime 
+from 
+yonghuibi_s.kpi_bravo_realtime as t1
+left join (
+select group_id ,dept_ids,class_ids,gids ,
+       district_ids,province_ids from  `yonghuibi`.sys_group_resources
+                      where group_id in (select group_id from yonghuibi.sys_group_reports where report_id = 31 )
+) t3 on 1=1
+where  t1.flagtype = 'shopgroup' and t1.store_class = 'class2' and t1.typeflag = 1 
+           and (t3.district_ids='all' or LOCATE(T1.store_area,T3.district_ids)>0 )
+
+;
+INSERT into yonghuibi.report_data_031_main(
+			  report_id,group_id,period,num,
+              part_name,`level`,dim1,dim_com,dim5
+              ,mea_float1,mea_float2,mea_float3
+			  ,mea_float4,mea_float5,mea_float6,mea_float7
+              ,mea_float8,mea_float9,load_time
+)
+select 
+   31
+ , t3.group_id  
+ , t1.sales_date as period 
+ , '0'  as num 
+ ,'grid2'     as part_name
+ , 1           as `LEVEL`
+ ,t1.store_name       as dim1
+ , '????'		 as dim_com
+  ,t1.store_name       as dim5
+ , t1.sales_amount 			 as mea_float1 
+ , 1                    as mea_float2 
+ , t1.profit  as mea_float3
+ , ( t1.order_cnt ) 				 as mea_float4 
+ , (t1.profit  )/( t1.sales_amount ) 								 as mea_float5 
+ , (t1.sales_amount)/(t1.order_cnt) 								 as mea_float6 
+ , t1.health_amount 								 as mea_float7 
+ , sku_cnt 								 as mea_float8 
+ , null							 as mea_float9 
+ , now()         					 as updatetime 
+from 
+yonghuibi_s.kpi_bravo_realtime as t1
+left join (
+select group_id ,dept_ids,class_ids,gids ,
+       district_ids,province_ids from  `yonghuibi`.sys_group_resources
+                      where group_id in (select group_id from yonghuibi.sys_group_reports where report_id = 31 )
+) t3 on 1=1 
+where  t1.flagtype = 'shopall' and t1.store_class = 'class2' and t1.typeflag = 1 
+          and (t3.district_ids='all' or LOCATE(T1.store_area,T3.district_ids)>0 )
+group by t1.store_name , t3.group_id , t1.sales_hour , t1.sales_date
+;
+
+END
+2016-10-22 18:37:56  [ main:523 ] - [ ERROR ]  com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '() begin
+
+/*
+ test
+*/
+	delete from yonghuibi.report_data_031_main where report_i' at line 1
+2016-10-22 18:44:19  [ main:0 ] - [ INFO ]  urljdbc:mysql://localhost:3306/yonghuibi dbuser:root dbpwd:root start to new test enviroment
+2016-10-22 18:44:19  [ main:334 ] - [ INFO ]  select test_id from sys_test_enviroment where original_id = '_031_'
+2016-10-22 18:44:19  [ main:347 ] - [ INFO ]  update
+sys_template_reports as t1 ,
+sys_template_reports as t2
+   set t1.content =replace(t2.content 
+		           ,CONCAT('_',9907,'_')
+		           , '_031_')
+where t1.report_id = 31 and t2.report_id = 9907
+2016-10-22 18:44:19  [ main:353 ] - [ INFO ]  DROP PROCEDURE IF EXISTS  ETL_report_id_031_main() 
+2016-10-22 18:44:19  [ main:364 ] - [ ERROR ]  com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '()' at line 1
+2016-10-22 18:49:21  [ main:0 ] - [ INFO ]  urljdbc:mysql://localhost:3306/yonghuibi dbuser:root dbpwd:root start to new test enviroment
+2016-10-22 18:49:21  [ main:320 ] - [ INFO ]  select test_id from sys_test_enviroment where original_id = '_031_'
+2016-10-22 18:49:21  [ main:333 ] - [ INFO ]  update
+sys_template_reports as t1 ,
+sys_template_reports as t2
+   set t1.content =replace(t2.content 
+		           ,CONCAT('_',9907,'_')
+		           , '_031_')
+where t1.report_id = 31 and t2.report_id = 9907
+2016-10-22 18:49:21  [ main:338 ] - [ INFO ]  DROP PROCEDURE IF EXISTS  ETL_report_id_031_main 
+2016-10-22 18:49:21  [ main:340 ] - [ INFO ]  CREATE PROCEDURE ETL_report_id_031_main() begin
+
+/*
+ test
+*/
+	delete from yonghuibi.report_data_031_main where report_id = 31 ;
+	delete from yonghuibi.report_data_031_banner where report_id = 31 ;
+INSERT INTO yonghuibi.report_data_031_banner
+					(report_id, group_id, period, num, 
+					part_name, 
+					`level`, dim_date, dim_com, dim5, 
+					mea_float1, mea_float2, mea_float3, 
+					mea_float4, mea_float5, mea_float6, 
+					mea_float7, mea_float8, mea_float9, 
+					created_at, updated_at)
+
+select distinct
+   31 
+ , t3.group_id  
+ , t1.sales_date 					 as period 
+ , t1.store_name 				 as num 
+ ,'filter'   							 as part_name
+ , 1           							 as `LEVEL`
+ , null            		             as dim_date
+ , t1.store_name       			 as dim_com
+ , t1.store_name                   as dim5
+ , t1.sales_amount as mea_float1 
+ , null as mea_float2 
+ , null  								 as mea_float3
+ , null  				 				 as mea_float4 
+ , null								 as mea_float5 
+ , null 								 as mea_float6 
+ , null 								 as mea_float7 
+ , null 								 as mea_float8 
+ , null                    			 as mea_float9 
+ , now()         					 as createtime  
+ , now()         					 as updatetime 
+from 
+yonghuibi_s.kpi_bravo_realtime as t1
+left join (
+select group_id ,dept_ids,class_ids,gids ,
+       district_ids,province_ids from  `yonghuibi`.sys_group_resources
+               where group_id in (select group_id from yonghuibi.sys_group_reports where report_id = 31 )
+) t3 on 1=1 
+where  t1.flagtype = 'shopall'  and t1.store_class = 'class2' and t1.typeflag = 1
+           and (t3.district_ids='all' or LOCATE(T1.store_area,T3.district_ids)>0 )
+           order by t1.sales_hour , t1.store_name , t3.group_id
+;  
+  	INSERT into yonghuibi.report_data_031_main(
+			  report_id,group_id,period,num,
+              part_name,`level`,dim1,dim_com,dim5
+              ,mea_float1,mea_float2,mea_float3
+			  ,mea_float4,mea_float5,mea_float6,mea_float7
+              ,mea_float8,mea_float9,load_time
+)
+select 
+   31 
+ , t3.group_id  
+ , t1.sales_date as period 
+ , case when  t1.sales_hour < 10 then concat('0',t1.sales_hour)  else t1.sales_hour end  as num 
+ ,'chart1'     as part_name
+ , 1           as `LEVEL`
+ , t1.store_name       as dim1
+ , t1.sales_hour       			 as dim_com
+ ,t1.store_name       as dim5
+ ,SUM(CASE WHEN t1.typeflag = 1 THEN t1.sales_amount else null END)/10000  as mea_float1 
+ ,SUM(CASE WHEN t1.typeflag = 2 THEN t1.sales_amount else null END)/10000  as mea_float2 
+ , null  as mea_float3
+ , null  				 as mea_float4 
+ , null								 as mea_float5 
+ , null 								 as mea_float6 
+ , null 								 as mea_float7 
+ , null 								 as mea_float8 
+ , null                    			 as mea_float9 
+ , now()         					 as updatetime 
+from 
+yonghuibi_s.kpi_bravo_realtime as t1
+left join (
+select group_id ,dept_ids,class_ids,gids ,
+       district_ids,province_ids from  `yonghuibi`.sys_group_resources
+                      where group_id in (select group_id from yonghuibi.sys_group_reports where report_id = 31 )
+) t3 on 1=1 
+where  t1.flagtype = 'shophour'  and t1.store_class = 'class2'
+           and (t3.district_ids='all' or LOCATE(T1.store_area,T3.district_ids)>0 )
+           group by t1.sales_hour,t3.group_id,t1.store_name
+order by t1.sales_hour , t1.store_name , t3.group_id
+;
+	
+
+INSERT into yonghuibi.report_data_031_main(
+			  report_id,group_id,period,num,
+              part_name,`level`,dim1,dim_com , dim5
+              ,mea_float1,mea_float2,mea_float3
+			  ,mea_float4,mea_float5,mea_float6,mea_float7
+              ,mea_float8,mea_float9,load_time
+)
+select 
+   31
+ , t3.group_id  
+ , t1.sales_date as period 
+ , case when  t1.sales_hour < 10 then concat('0',t1.sales_hour)  else t1.sales_hour end  as num 
+ ,'grid1'     as part_name
+ , 1           as `LEVEL`
+ ,t1.store_name       as dim1
+ , case when  t1.sales_hour < 10 then concat('0',t1.sales_hour)  else t1.sales_hour end      			 as dim_com
+ ,t1.store_name      as dim5
+ , (t1.sales_amount)  			 as mea_float1 
+ , (t1.order_cnt  )                      as mea_float2 
+ , (t1.profit)/(t1.sales_amount)  as mea_float3
+ , (t1.sales_amount) / (t1.order_cnt) 				 as mea_float4 
+ , t1.sku_cnt as mea_float5
+ , NULL								 as mea_float6 
+ , null 								 as mea_float7 
+ , null 								 as mea_float8 
+ , null 								 as mea_float9 
+ , now()         					 as updatetime 
+from 
+yonghuibi_s.kpi_bravo_realtime as t1
+left join (
+select group_id ,dept_ids,class_ids,gids ,
+       district_ids,province_ids from  `yonghuibi`.sys_group_resources
+                      where group_id in (select group_id from yonghuibi.sys_group_reports where report_id = 31 )
+) t3 on 1=1 
+where  t1.flagtype = 'shophour' and t1.store_class = 'class2' and t1.typeflag = 1 
+           and (t3.district_ids='all' or LOCATE(T1.store_area,T3.district_ids)>0 )
+
+;
+  
+
+INSERT into yonghuibi.report_data_031_main(
+			  report_id,group_id,period,num,
+              part_name,`level`,dim1,dim_com,dim5
+              ,mea_float1,mea_float2,mea_float3
+			  ,mea_float4,mea_float5,mea_float6,mea_float7
+              ,mea_float8,mea_float9,load_time
+)
+select 
+   31
+ , t3.group_id  
+ , t1.sales_date as period 
+ , '0'  as num 
+ ,'grid1'     as part_name
+ , 1           as `LEVEL`
+ ,t1.store_name       as dim1
+ , '????'		     as dim_com
+ ,t1.store_name       as dim5
+ , (t1.sales_amount)  			 as mea_float1 
+ , (t1.order_cnt  )                      as mea_float2 
+ , (t1.profit)/(t1.sales_amount)  as mea_float3
+ , (t1.sales_amount) / (t1.order_cnt) 				 as mea_float4 
+ , t1.sku_cnt as mea_float5
+ , null								 as mea_float6 
+ , null 								 as mea_float7 
+ , null 								 as mea_float8 
+ , null 								 as mea_float9 
+ , now()         					 as updatetime 
+from 
+yonghuibi_s.kpi_bravo_realtime as t1
+left join (
+select group_id ,dept_ids,class_ids,gids ,
+       district_ids,province_ids from  `yonghuibi`.sys_group_resources
+                      where group_id in (select group_id from yonghuibi.sys_group_reports where report_id = 31 )
+) t3 on 1=1 
+where  t1.flagtype = 'shopall' and t1.store_class = 'class2' and t1.typeflag = 1 
+           and (t3.district_ids='all' or LOCATE(T1.store_area,T3.district_ids)>0 )
+
+;
+  
+INSERT into yonghuibi.report_data_031_main(
+			  report_id,group_id,period,num,
+              part_name,`level`,dim1,dim_com , dim5
+              ,mea_float1,mea_float2,mea_float3
+			  ,mea_float4,mea_float5,mea_float6,mea_float7
+              ,mea_float8,mea_float9,load_time
+)
+select 
+   31
+ , t3.group_id  
+ , t1.sales_date as period 
+ , case when  t1.sales_hour < 10 then concat('0',t1.sales_hour)  else t1.sales_hour end  as num 
+ ,'grid3'     as part_name
+ , 1           as `LEVEL`
+ ,t1.store_name       as dim1
+ , case when  t1.sales_hour < 10 then concat('0',t1.sales_hour)  else t1.sales_hour end      			 as dim_com
+ ,t1.store_name      as dim5
+ , (t1.sales_amount)  			 as mea_float1 
+ , (t1.order_cnt  )                      as mea_float2 
+ , (t1.profit)/(t1.sales_amount)  as mea_float3
+ , (t1.sales_amount) / (t1.order_cnt) 				 as mea_float4 
+ , t1.sku_cnt as mea_float5
+ , null								 as mea_float6 
+ , null 								 as mea_float7 
+ , null 								 as mea_float8 
+ , null 								 as mea_float9 
+ , now()         					 as updatetime 
+from 
+yonghuibi_s.kpi_bravo_realtime as t1
+left join (
+select group_id ,dept_ids,class_ids,gids ,
+       district_ids,province_ids from  `yonghuibi`.sys_group_resources
+                      where group_id in (select group_id from yonghuibi.sys_group_reports where report_id = 31 )
+) t3 on 1=1 
+where  t1.flagtype = 'shophour' and t1.store_class = 'class2' and t1.typeflag = 2
+           and (t3.district_ids='all' or LOCATE(T1.store_area,T3.district_ids)>0 )
+
+;
+  
+
+INSERT into yonghuibi.report_data_031_main(
+			  report_id,group_id,period,num,
+              part_name,`level`,dim1,dim_com,dim5
+              ,mea_float1,mea_float2,mea_float3
+			  ,mea_float4,mea_float5,mea_float6,mea_float7
+              ,mea_float8,mea_float9,load_time
+)
+select 
+   31
+ , t3.group_id  
+ , t1.sales_date as period 
+ , '0'  as num 
+ ,'grid3'     as part_name
+ , 1           as `LEVEL`
+ ,t1.store_name       as dim1
+ , '????'		     as dim_com
+ ,t1.store_name       as dim5
+ , (t1.sales_amount)  			 as mea_float1 
+ , (t1.order_cnt  )                      as mea_float2 
+ , (t1.profit)/(t1.sales_amount)  as mea_float3
+ , (t1.sales_amount) / (t1.order_cnt) 				 as mea_float4 
+ , t1.sku_cnt as mea_float5
+ , null								 as mea_float6 
+ , null 								 as mea_float7 
+ , null 								 as mea_float8 
+ , null 								 as mea_float9 
+ , now()         					 as updatetime 
+from 
+yonghuibi_s.kpi_bravo_realtime as t1
+left join (
+select group_id ,dept_ids,class_ids,gids ,
+       district_ids,province_ids from  `yonghuibi`.sys_group_resources
+                      where group_id in (select group_id from yonghuibi.sys_group_reports where report_id = 31 )
+) t3 on 1=1 
+where  t1.flagtype = 'shopall' and t1.store_class = 'class2' and t1.typeflag = 2
+           and (t3.district_ids='all' or LOCATE(T1.store_area,T3.district_ids)>0 )
+
+;
+
+
+
+INSERT into yonghuibi.report_data_031_main(
+			  report_id,group_id,period,num,
+              part_name,`level`,dim1,dim_com,dim5
+              ,mea_float1,mea_float2,mea_float3
+			  ,mea_float4,mea_float5,mea_float6,mea_float7
+              ,mea_float8,mea_float9,load_time
+)
+select 
+   31
+ , t3.group_id  
+ , t1.sales_date as period 
+ , concat(t1.store_name , t1.cat1_name)  as num 
+ ,'grid2'     as part_name
+ , 1           as `LEVEL`
+ ,t1.store_name       as dim1
+ , t1.cat1_name  			 as dim_com
+ ,t1.store_name       as dim5
+ , t1.sales_amount 			 as mea_float1 
+ , (t1.sales_amount  )/( select sales_amount from  yonghuibi_s.kpi_bravo_realtime as tt where tt.store_id = t1.store_id and tt.flagtype = 'shopall' and tt.store_class = 'class2' and tt.typeflag = 1)                      as mea_float2 
+ , t1.profit  as mea_float3
+ , ( t1.order_cnt ) 				 as mea_float4 
+ , (t1.profit  )/( t1.sales_amount ) 								 as mea_float5 
+ , (t1.avg_amount) 								 as mea_float6 
+ , t1.health_amount 								 as mea_float7 
+ , sku_cnt 								 as mea_float8 
+ , null 								 as mea_float9 
+ , now()         					 as updatetime 
+from 
+yonghuibi_s.kpi_bravo_realtime as t1
+left join (
+select group_id ,dept_ids,class_ids,gids ,
+       district_ids,province_ids from  `yonghuibi`.sys_group_resources
+                      where group_id in (select group_id from yonghuibi.sys_group_reports where report_id = 31 )
+) t3 on 1=1
+where  t1.flagtype = 'shopgroup' and t1.store_class = 'class2' and t1.typeflag = 1 
+           and (t3.district_ids='all' or LOCATE(T1.store_area,T3.district_ids)>0 )
+
+;
+INSERT into yonghuibi.report_data_031_main(
+			  report_id,group_id,period,num,
+              part_name,`level`,dim1,dim_com,dim5
+              ,mea_float1,mea_float2,mea_float3
+			  ,mea_float4,mea_float5,mea_float6,mea_float7
+              ,mea_float8,mea_float9,load_time
+)
+select 
+   31
+ , t3.group_id  
+ , t1.sales_date as period 
+ , '0'  as num 
+ ,'grid2'     as part_name
+ , 1           as `LEVEL`
+ ,t1.store_name       as dim1
+ , '????'		 as dim_com
+  ,t1.store_name       as dim5
+ , t1.sales_amount 			 as mea_float1 
+ , 1                    as mea_float2 
+ , t1.profit  as mea_float3
+ , ( t1.order_cnt ) 				 as mea_float4 
+ , (t1.profit  )/( t1.sales_amount ) 								 as mea_float5 
+ , (t1.sales_amount)/(t1.order_cnt) 								 as mea_float6 
+ , t1.health_amount 								 as mea_float7 
+ , sku_cnt 								 as mea_float8 
+ , null							 as mea_float9 
+ , now()         					 as updatetime 
+from 
+yonghuibi_s.kpi_bravo_realtime as t1
+left join (
+select group_id ,dept_ids,class_ids,gids ,
+       district_ids,province_ids from  `yonghuibi`.sys_group_resources
+                      where group_id in (select group_id from yonghuibi.sys_group_reports where report_id = 31 )
+) t3 on 1=1 
+where  t1.flagtype = 'shopall' and t1.store_class = 'class2' and t1.typeflag = 1 
+          and (t3.district_ids='all' or LOCATE(T1.store_area,T3.district_ids)>0 )
+group by t1.store_name , t3.group_id , t1.sales_hour , t1.sales_date
+;
+
+END
+2016-10-22 18:54:43  [ main:0 ] - [ INFO ]  urljdbc:mysql://localhost:3306/yonghuibi dbuser:root dbpwd:root start to new test enviroment
+2016-10-22 18:54:44  [ main:398 ] - [ INFO ]  call remove_testshift(31 ) completed!
+2016-10-22 18:57:45  [ main:0 ] - [ INFO ]  urljdbc:mysql://localhost:3306/yonghuibi dbuser:root dbpwd:root start to new test enviroment
+2016-10-22 18:57:46  [ main:363 ] - [ INFO ]  call remove_testshift(31 ) completed!
+2016-10-22 19:37:45  [ main:0 ] - [ INFO ]  urljdbc:mysql://localhost:3306/yonghuibi dbuser:root dbpwd:root start to new test enviroment
+2016-10-22 19:37:46  [ main:401 ] - [ INFO ]  call testshift(32 ) completed!
+2016-10-22 19:37:46  [ main:403 ] - [ INFO ]  获取测试报表的 ID 是：9907
+2016-10-22 19:37:46  [ main:404 ] - [ INFO ]  urljdbc:mysql://localhost:3306/yonghuibi dbuser:root dbpwd:root start to new test enviroment
+2016-10-22 19:37:46  [ main:419 ] - [ INFO ]  drop PROCEDURE yonghuibi.ETL_report_id_9907_main_test :false
+2016-10-22 19:37:46  [ main:421 ] - [ INFO ]  create PROCEDURE yonghuibi.ETL_report_id_9907_main_test :false
