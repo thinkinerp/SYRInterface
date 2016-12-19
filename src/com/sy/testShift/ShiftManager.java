@@ -15,7 +15,6 @@ public class ShiftManager {
 			Cmds cmds = new Cmds();		  
 			if(args.length == 2){
 				for(String s : args){
-					System.out.println(s.indexOf("-"));
 					if(s.indexOf("-") >= 0){
 						cmds.setOptions(s);
 					}else{
@@ -56,13 +55,7 @@ public class ShiftManager {
 	        Properties pps = new Properties();
             try {
            	 
-//				pps.load(ShiftManager.class.getClassLoader().getResourceAsStream("com/sy/testShift/sql_conn.properties"));
-//				pps.load(ShiftManager.class.getClassLoader().getResourceAsStream("../../"));
 				URL url = ShiftManager.class.getResource("/");
-				
-/*				System.out.println("dir"+url);
-				System.out.println(url.getPath().replace("SYRInterface/bin/", ""));
-				System.out.println(url.getPath().replace("SYRInterface/bin/", "") + "sql_conn.properties");*/
 				pps.load(new FileInputStream( "sql_conn.properties"));
 			} catch (IOException e) {
 				e.printStackTrace();

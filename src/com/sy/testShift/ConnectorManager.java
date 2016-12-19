@@ -1,5 +1,9 @@
 package com.sy.testShift;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Blob;
 import java.sql.CallableStatement;
@@ -8,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.PreparedStatement;
+
 import org.apache.log4j.Logger;
 
 import com.mysql.jdbc.Connection;
@@ -68,14 +73,22 @@ public class ConnectorManager {
 			rs.next();
 			b  = rs.getBlob("body");
 			String s = BlobToString(b);
-			
-			s = s.replace("report_data_"+test_id+"_main", "report_data_"+test_id+"_main_test");
-			s = s.replace("report_data_"+test_id+"_banner", "report_data_"+test_id+"_banner_test");
-			
-			sql ="DROP PROCEDURE IF EXISTS yonghuibi.ETL_report_id_"+test_id+"_main_test" ;
+			backupJSONOrProcedure( s , kpi_id + "report_procedure_backup.txt");
+			s = s.replace("report_data_"+(kpi_id < 100 ? "0" + kpi_id :kpi_id )+"_main", "report_data_"+test_id+"_main");
+			s = s.replace("report_data_"+(kpi_id < 100 ? "0" + kpi_id :kpi_id )+"_banner", "report_data_"+test_id+"_banner");
+			s = s.replace("" + kpi_id, test_id);
+
+			sql ="DROP PROCEDURE IF EXISTS yonghuibi.ETL_report_id_"+test_id+"_main_test ;" ;
 			
 			sql ="CREATE PROCEDURE ETL_report_id_"+test_id+"_main_test() " + s ;
-			logger.info("create PROCEDURE yonghuibi.ETL_report_id_"+test_id+"_main_test :" + stmt.execute(sql));;
+			
+			logger.info("create PROCEDURE yonghuibi.ETL_report_id_"+test_id+"_main_test :" + stmt.execute(sql));
+            sql = " SELECT content FROM yonghuibi.sys_template_reports WHERE  report_id = " + kpi_id ;
+            rs.close();
+            rs = stmt.executeQuery(sql);
+            rs.next();
+            s = rs.getString("content");
+            backupJSONOrProcedure( s , kpi_id + "report_json.txt");
 
 		} catch (SQLException e) {
 			logger.error(e);
@@ -234,6 +247,25 @@ public class ConnectorManager {
 				}
 	}
 
+	
+	public void backupJSONOrProcedure( String s , String fileName ){
+		File file =new File(fileName);
+		try {
+	        if(!file.exists()){
+				file.createNewFile();
+	         }		
+	        
+		     FileWriter fileWritter = new FileWriter(file.getName());
+	         BufferedWriter bufferWritter = new BufferedWriter(fileWritter);
+	         bufferWritter.write(s);
+	         bufferWritter.close();
+	             
+        } catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	public void delTestEnviroment(int id) {
 		    
 		//调用存储过程将出存储过程之外的权限控制删除
