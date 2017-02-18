@@ -12,6 +12,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.PreparedStatement;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.apache.log4j.Logger;
 
@@ -255,8 +257,8 @@ public class ConnectorManager {
 	        if(!file.exists()){
 				file.createNewFile();
 	         }		
-	        
-		     FileWriter fileWritter = new FileWriter(file.getName());
+	        SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
+		     FileWriter fileWritter = new FileWriter(f.format(new Date())+file.getName() );
 	         BufferedWriter bufferWritter = new BufferedWriter(fileWritter);
 	         bufferWritter.write(s);
 	         bufferWritter.close();
