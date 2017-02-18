@@ -201,7 +201,6 @@ public class ConnectorManager {
 		      	  String test_id = rs.getString("test_id");
 		      	  rs.close();
 		      	  st.close();
-
 		      	  
 		      	  sql = "update\n" +
 		      			"sys_template_reports as t1 ,\n" +
@@ -226,6 +225,8 @@ public class ConnectorManager {
 		      	  st = conn.prepareStatement(sql);
 		      	  st.execute();		      	  
 		      	  st.close();   	  
+		      	  body =  body.replace("_test", "").replace("_" + test_id + "_","_" + (arg_kpi_id < 100 ? "0" + arg_kpi_id: "" + arg_kpi_id) +"_");
+		      	  body = body.replaceAll(test_id,arg_kpi_id + "" );
 		      	  
 		      	  sql ="CREATE PROCEDURE ETL_report_id_"+(arg_kpi_id < 100 ? "0" + arg_kpi_id: "" + arg_kpi_id)+"_main() " + body.replace("_test", "").replace("_" + test_id + "_","_" + (arg_kpi_id < 100 ? "0" + arg_kpi_id: "" + arg_kpi_id) +"_") ;
 		      	  st = conn.prepareStatement(sql);
@@ -282,7 +283,7 @@ public class ConnectorManager {
       	  rs = st.getResultSet();
       	  
       	  rs.next();
-          logger.info("call remove_testshift("+id+" ) completed!");
+      	  logger.info("call remove_testshift("+id+" ) completed!");
           testId =rs.getString("testId");
           st.close();
           // 删除存储过程
